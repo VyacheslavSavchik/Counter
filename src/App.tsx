@@ -1,25 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {Increment} from "./Increment";
+import {Reset} from "./Reset";
+import {Counter} from "./Counter";
+
 
 function App() {
+  const startNumbers = 0;
+  const maxNumbers = 5;
+const [numbers, setNumbers] = useState(0)
+
+  const addNumbers = () => {
+      if (numbers < maxNumbers) {
+          setNumbers(numbers + 1)
+      }
+  }
+    const resNumbers = () => {
+      if(numbers !== startNumbers) {
+          setNumbers(startNumbers)
+      }
+      }
+
+
+    const incDisabled = numbers === maxNumbers;
+    const resetDisabled = numbers === startNumbers;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <Counter
+            numbers = {numbers}
+            maxNumbers={maxNumbers}
+      />
+      <>
+    <Increment
+        callback={addNumbers}
+        incDisabled={incDisabled}
+    />
+    <Reset
+        callback={resNumbers}
+        resetDisabled={resetDisabled}/>
+    </>
+    </>
   );
 }
 

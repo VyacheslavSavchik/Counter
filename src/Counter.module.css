@@ -1,0 +1,58 @@
+.counter {
+    display: block;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 280px;
+    height: 100px;
+    border: solid #61dafb;
+    border-radius: 7px;
+    padding-bottom: 50px;
+    background-color: #61dafb;
+    background-size: 280px;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.red {
+    color: red;
+}
+
+.disabled {
+    color: #002e5c;
+    background: #004d99;
+    opacity: 0.5;
+}
+
+.reset {
+    background-size: 200px;
+    text-align: center;
+    border-radius: 7px;
+    width: 100px;
+    display: block;
+    margin-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #61dafb;
+
+}
+
+.inc {
+    background-size: 200px;
+    text-align: center;
+    border-radius: 7px;
+    width: 100px;
+    display: block;
+    margin-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #61dafb;
+}
+
